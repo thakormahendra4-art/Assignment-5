@@ -154,7 +154,37 @@ p span {
 
 .scroller {
   height: 25%;
-  background-color: royalblue;
+  display: flex;
+  overflow: hidden;
+
+}
+
+.scroller-images{
+  height: 100%;
+  width: 100%;
+  padding: 0 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
+
+  animation-name: scroller;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.scroller-images img{
+  height: 5vh;
+}
+
+@keyframes scroller{
+  from{
+      transform: translateX();
+  }
+  to{
+    transform: translateX(-100%);
+  }
 }
 
 .card {
@@ -713,8 +743,8 @@ footer {
 .logo-2 > div i {
   font-size: 22px;
   display: inline;
-  padding: 0.5rem;
   border-radius: 50%;
+  margin-right: 1rem;
 }
 
 
